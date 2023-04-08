@@ -19,8 +19,9 @@ public class RoundedCornerOutlineProvider
 	public RoundedCornerOutlineProvider ()
 	{
 		super ();
-		if (getClass () == RoundedCornerOutlineProvider.class)
+		if (getClass () == RoundedCornerOutlineProvider.class) {
 			mono.android.TypeManager.Activate ("Xamarin.Forms.PancakeView.Droid.RoundedCornerOutlineProvider, Xamarin.Forms.PancakeView", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

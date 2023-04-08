@@ -23,8 +23,9 @@ public class PancakeDrawable
 	public PancakeDrawable ()
 	{
 		super ();
-		if (getClass () == PancakeDrawable.class)
+		if (getClass () == PancakeDrawable.class) {
 			mono.android.TypeManager.Activate ("Xamarin.Forms.PancakeView.Droid.PancakeDrawable, Xamarin.Forms.PancakeView", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 
