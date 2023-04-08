@@ -10,3 +10,16 @@ C:\Users\Bane\Documents\GitHub\xamarin-forms-samples\GetStarted\FirstApp\Awesome
 C:\Users\Bane\Documents\GitHub\xamarin-forms-samples\GetStarted\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Bane\Documents\GitHub\xamarin-forms-samples\GetStarted\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.dll
 C:\Users\Bane\Documents\GitHub\xamarin-forms-samples\GetStarted\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.pdb
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.deps.json
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.dll
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.pdb
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.AssemblyReference.cache
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfoInputs.cache
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfo.cs
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.CoreCompileInputs.cache
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.dll
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.pdb

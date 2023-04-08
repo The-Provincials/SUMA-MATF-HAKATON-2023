@@ -1,1 +1,1 @@
-C:\Users\Bane\Documents\GitHub\xamarin-forms-samples\GetStarted\FirstApp\AwesomeApp\AwesomeApp.UWP\AwesomeApp.UWP.csproj;x86
+C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp.UWP\AwesomeApp.UWP.csproj;x86
