@@ -11,12 +11,12 @@ androidpackageformat=apk
 embedassembliesintoapk=false
 androidlinkmode=none
 androidlinkskip=
-androidsdkbuildtoolsversion=32.0.0
+androidsdkbuildtoolsversion=30.0.3
 androidsdkpath=c:\program files (x86)\android\android-sdk\
 androidndkpath=
-javasdkpath=c:\program files\microsoft\jdk-11.0.16.101-hotspot\
+javasdkpath=c:\program files\microsoft\jdk-11.0.12.7-hotspot\
 androidsequencepointsmode=none
-xamarinandroidversion=13.2.0-0
+xamarinandroidversion=12.2.0-4
 monosymbolarchive=false
 androiduselatestplatformsdk=false
 targetframeworkversion=v10.0
@@ -25,11 +25,10 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638162051599608967
+_nugetassetstimestamp=638163810624652679
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\bane\documents\github\xamarin-forms-samples\getstarted\firstapp\awesomeapp\awesomeapp.android\awesomeapp.android.csproj

@@ -20,9 +20,8 @@ public class BottomNavigationView_OnNavigationItemReselectedListenerImplementor
 	public BottomNavigationView_OnNavigationItemReselectedListenerImplementor ()
 	{
 		super ();
-		if (getClass () == BottomNavigationView_OnNavigationItemReselectedListenerImplementor.class) {
+		if (getClass () == BottomNavigationView_OnNavigationItemReselectedListenerImplementor.class)
 			mono.android.TypeManager.Activate ("Google.Android.Material.BottomNavigation.BottomNavigationView+IOnNavigationItemReselectedListenerImplementor, Xamarin.Google.Android.Material", "", this, new java.lang.Object[] {  });
-		}
 	}
 
 
