@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Application2.Views.AboutPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,0" CornerRadius="15">
+                    <Label Text="U okviru igre Vas zadatak je da kreirate sto efikasniju kombinacionu mrezu za zadati izraz. Dostupna su sledeca kola:"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="or.jpg" Margin="10,0,10,0"/>
+                    <Image Grid.Column="1" Source="and.png" Margin="10,0,10,0"/>
+                    <Image Grid.Column="2" Source="not.jpg" Margin="10,0,10,0"/>
+                </Grid>
+                <Frame BackgroundColor="#99c2ff" Margin="10,0,10,10" CornerRadius="15">
+                    <Label Text="Nakon potvrde Vaseg resenja dobicete poruku o njegovoj uspesnosti, kao i informaciju da li je vase resenje i u kojoj meri efikasno"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="Kako bi Vase resenje bilo efikasno potrebno je realizovati mrezu na osnovu ekvivalentnog izraza u KNF/DNF formi"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+                <Frame BackgroundColor="#99c2ff" Margin="10,10,10,10" CornerRadius="15">
+                    <Label Text="jghjrhghgoiehjgoiegjoegor lorem ipsum"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

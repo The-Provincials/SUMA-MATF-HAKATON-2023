@@ -21,5 +21,9 @@ namespace Application2
         {
             Navigation.PushAsync(new GamePage());
         }
+        private void Button_about_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutPage());
+        }
     }
 }

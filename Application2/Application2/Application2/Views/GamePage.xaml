@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Application2.Views.GamePage">
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="CornflowerBlue" Padding="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -16,9 +16,25 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Text="Back" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" Clicked="Button_Clicked"/>
-            <Label Text="unos" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand"/>
-            <Button Text="Submit" Grid.Row="0" Grid.Column="5" BackgroundColor="Red"/>
+
+            <ImageButton  Source="back_black_icon2.png" Grid.Row="0" Grid.Column="0" Padding="12" BackgroundColor="CornflowerBlue" Clicked="Button_Clicked"/>
+            
+            <Label HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                   Text="A xor B" 
+                   Grid.Row="0" 
+                   Grid.Column="1" 
+                   Grid.ColumnSpan="3" 
+                   />
+            <ImageButton Source="check_icon.png" Grid.Row="0" Grid.Column="4" Padding="12" BackgroundColor="CornflowerBlue"/>
+
+            <Frame Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="#e6f0ff">
+                
+            </Frame>
+            <Button Text="Undo" Grid.Row="2" Grid.Column="0" BackgroundColor="#99c2ff"/>
+            <Button Text="And" Grid.Row="2" Grid.Column="1" BackgroundColor="#e6f0ff"/>
+            <Button Text="Or" Grid.Row="2" Grid.Column="2" BackgroundColor="#99c2ff"/>
+            <Button Text="Not" Grid.Row="2" Grid.Column="3" BackgroundColor="#e6f0ff"/>
+            <Button Text="CLR" Grid.Row="2" Grid.Column="4" BackgroundColor="#99c2ff"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
