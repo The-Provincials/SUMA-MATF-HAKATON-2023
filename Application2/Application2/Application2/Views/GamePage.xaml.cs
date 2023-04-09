@@ -26,14 +26,19 @@ namespace Application2.Views
             None,
             And,
             Or,
-            Not
+            Not,
+            In,
+            Out
         }
 
         SKBitmap bitmapAnd = null, bitmapOr = null, bitmapNot = null, bitmapOut = null;
         SKBitmap bitmapIn = null;
         SKMatrix matrix = SKMatrix.CreateIdentity();
         SKRect rectAnd, rectOr, rectNot, rectClear, rectOut;
+        SKRect[] rectsIn;
         LogicObject firstClicked = null, outGate = null;
+        LogicObject[] inGates;
+
         SKPoint firstClickedPoint;
         int lowerCoordinate = 0;
 
@@ -106,47 +111,31 @@ namespace Application2.Views
                         foreach(Tuple<SKMatrix, GateType, LogicObject> 
                             matrixGateType in DrawnObjectMatrices)
                         {
-                            if ((ClicksOut(point.X, point.Y) && firstClicked != null) ||
+                            if ((ClicksOut(point.X, point.Y) && firstClicked != null &&
+                                matrixGateType.Item2 == GateType.Out) ||
                                 (matrixGateType.Item2 != GateType.None &&
+                                matrixGateType.Item2 != GateType.In &&
+                                matrixGateType.Item2 != GateType.Out &&
                                 matrixGateType.Item1.MapRect(
                                 GateToRect(matrixGateType.Item2))
                                 .Contains(point)))
                             {
-                                if (firstClicked != null)
+                                ProcessClick(matrixGateType, matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)));
+                            }
+                            if(matrixGateType.Item2 == GateType.In)
+                            {
+                                for(int i = 0; i < numOfVariables; ++i)
                                 {
-                                    try
+                                    if (inGates[i].Id != matrixGateType.Item3.Id)
+                                        continue;
+                                    SKRect rect = rectsIn[i];
+                                    if (matrixGateType.Item1.MapRect(rect)
+                                        .Contains(point))
                                     {
-                                        var newLine = 
-                                        new Tuple<SKPoint, SKPoint>
-                                            (new SKPoint(firstClickedPoint.X, firstClickedPoint.Y), 
-                                            new SKPoint(
-                                            (int)(matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)).Left + bitmapAnd.Width*0.1f),
-                                            matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)).MidY));
-                                        if (LinesForDrawing.Contains(newLine))
-                                        {
-                                            matrixGateType.Item3.RemoveSource(firstClicked);
-                                            LinesForDrawing.Remove(newLine);
-                                        }
-                                        else
-                                        {
-                                            matrixGateType.Item3.AddSource(firstClicked);
-                                            LinesForDrawing.Add(newLine);
-                                        }
+                                        //DisplayAlert(rect.Top.ToString() + "\n" + rect.Bottom.ToString(),
+                                        //    point.X.ToString() + " " + point.Y.ToString(), "a");
+                                        ProcessClick(matrixGateType, rect);
                                     }
-                                    catch (Exception)
-                                    {
-                                        DisplayAlert("GREŠKA", "Ovo nije moguće", "OK");
-                                    }
-                                    finally
-                                    {
-                                        firstClicked = null;
-                                    }
-                                    
-                                } else
-                                {
-                                    firstClicked = matrixGateType.Item3;
-                                    firstClickedPoint = new SKPoint(matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)).Right,
-                                        matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)).MidY);
                                 }
                             }
                         }
@@ -185,6 +174,47 @@ namespace Application2.Views
                 case TouchActionType.Cancelled:
                     touchId = -1;
                     break;
+            }
+        }
+
+        void ProcessClick(Tuple<SKMatrix, GateType, LogicObject> matrixGateType,
+            SKRect rect)
+        {
+            if (firstClicked != null)
+            {
+                try
+                {
+                    var newLine =
+                    new Tuple<SKPoint, SKPoint>
+                        (new SKPoint(firstClickedPoint.X, firstClickedPoint.Y),
+                        new SKPoint(
+                        (int)(rect.Left + bitmapAnd.Width * 0.1f),
+                        rect.MidY));
+                    if (LinesForDrawing.Contains(newLine))
+                    {
+                        matrixGateType.Item3.RemoveSource(firstClicked);
+                        LinesForDrawing.Remove(newLine);
+                    }
+                    else
+                    {
+                        matrixGateType.Item3.AddSource(firstClicked);
+                        LinesForDrawing.Add(newLine);
+                    }
+                }
+                catch (Exception)
+                {
+                    DisplayAlert("GREŠKA", "Ovo nije moguće", "OK");
+                }
+                finally
+                {
+                    firstClicked = null;
+                }
+
+            }
+            else
+            {
+                firstClicked = matrixGateType.Item3;
+                firstClickedPoint = new SKPoint(rect.Right, rect.MidY);
             }
         }
 
@@ -256,11 +286,13 @@ namespace Application2.Views
             for (int i = 0; i < numOfVariables; ++i)
             {
                 canvas.DrawBitmap(bitmapIn, new SKPoint(0, (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i + 1)));
-                canvas.DrawText(('A' + i).ToString(),
+                canvas.DrawText(((char)('A' + i)).ToString(),
                     new SKPoint(0,
-                    (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i))
+                    (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i + 2))
                     , new SKPaint{TextSize = 100.0f});
             }
+
+            canvas.SetMatrix(SKMatrix.CreateIdentity());
 
             if (cleared)
             {
@@ -296,7 +328,13 @@ namespace Application2.Views
         
         void AddInGates()
         {
-
+            inGates = new LogicObject[numOfVariables];
+            for(int i = 0; i < numOfVariables; ++i)
+            {
+                inGates[i] = new InObject(i.ToString(), false);
+                DrawnObjectMatrices.Add(new Tuple<SKMatrix, GateType, LogicObject>(
+                SKMatrix.CreateIdentity(), GateType.In, inGates[i]));
+            }
         }
 
         void AddOutGate()
@@ -304,7 +342,7 @@ namespace Application2.Views
             outGate = new OutObject();
 
             DrawnObjectMatrices.Add(new Tuple<SKMatrix, GateType, LogicObject>(
-                SKMatrix.CreateIdentity(), GateType.None, outGate));
+                SKMatrix.CreateIdentity(), GateType.Out, outGate));
         }
 
         private void InitBitmaps()
@@ -360,7 +398,7 @@ namespace Application2.Views
             rectOut = new SKRect(canvasView.CanvasSize.Width * 9/10, 0.5f / shellPercentage * bitmapAnd.Width - bitmapAnd.Width / 2, canvasView.CanvasSize.Width, 0.5f / shellPercentage * bitmapAnd.Width + bitmapAnd.Width / 2);
 
 
-            resourceID = "Applications2.Resources.in.jpg";
+            resourceID = "Application2.Resources.in.jpg";
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
             {
                 SKBitmap tmpBitmap = SKBitmap.Decode(stream);
@@ -370,7 +408,15 @@ namespace Application2.Views
                 tmpBitmap.ScalePixels(bitmapIn, SKFilterQuality.Low);
             }
 
-            
+            rectsIn = new SKRect[numOfVariables];
+            for(int i = 0; i < numOfVariables; ++i)
+            {
+                rectsIn[i] = new SKRect(
+                 0, (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i + 1),
+                 canvasView.CanvasSize.Width / 10,
+                 (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i + 1) +
+                 canvasView.CanvasSize.Width / 5);
+            }
 
         }
 
@@ -395,6 +441,39 @@ namespace Application2.Views
                     return rectOut;
             }
             throw new Exception();
+        }
+
+        public List<bool> Test()
+        {
+            List<bool> res = new List<bool>();
+            try
+            {
+                for (int i = 0; i < (1 << numOfVariables); ++i)
+                {
+                    int br = 0;
+                    for (int j = 0; j < numOfVariables; ++j)
+                    {
+                        if ((i & (1 << j)) != 0)
+                        {
+                            inGates[j].SetValue(true);
+                            br += (1 << j);
+                        }
+                        else
+                        {
+                            inGates[j].SetValue(false);
+                        }
+                    }
+                    outGate.Deevaluate();
+                    res.Add(outGate.Evaluate());
+                }
+            } catch (Exception ex)
+            {
+                DisplayAlert("GREŠKA", "Nije moguće evaluirati iskaz", "OK");
+            }
+            
+            return res;
+            
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Application2.Models
         }
         public string Name { get; set; }
 
-        public void SetValue(bool val)
+        public override void SetValue(bool val)
         {
             this.Value = val;
         }

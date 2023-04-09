@@ -23,7 +23,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\and.jpg" />
     <EmbeddedResource Include="Resources\and.png" />
-    <EmbeddedResource Include="Resources\in.jpg" />
+    <EmbeddedResource Include="Resources\in.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\not.jpg" />
     <EmbeddedResource Include="Resources\outgate.jpg" />
   </ItemGroup>

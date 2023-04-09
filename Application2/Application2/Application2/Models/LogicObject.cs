@@ -29,6 +29,22 @@ namespace Application2.Models
             get; set;
         }
 
+        public void Deevaluate()
+        {
+            this.IsBeingEvaluated = false;
+            this.IsEvaluated = false;
+            
+            List<LogicObject> list;
+            if (EvaluatedFrom.TryGetValue(this.Id, out list))
+            {
+                foreach (LogicObject obj in EvaluatedFrom[this.Id])
+                {
+                    obj.Deevaluate();
+                }
+            }
+
+        }
+
         public virtual bool Evaluate()
         {
             if (this.IsBeingEvaluated)
@@ -36,6 +52,7 @@ namespace Application2.Models
                 throw new Exception();
             }
             this.IsBeingEvaluated = true;
+            
             List<LogicObject> list;
             if(EvaluatedFrom.TryGetValue(this.Id, out list))
             {
@@ -70,6 +87,11 @@ namespace Application2.Models
             this.IsEvaluated = false;
             other.IsEvaluated = false;
 
+        }
+
+        public virtual void SetValue(bool value)
+        {
+            throw new Exception();
         }
 
         public void RemoveSource(LogicObject other)
