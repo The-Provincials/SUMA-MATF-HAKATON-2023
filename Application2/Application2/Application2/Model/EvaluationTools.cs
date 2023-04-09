@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Reflection;
 
 namespace Application2.Model
 {
@@ -14,20 +15,22 @@ namespace Application2.Model
             if (a > b) return a;
             return b;
         }
-        static string getRandomLine()
+        static string getRandomLine( Stream fs )
         {
             int br = rnd.Next(1, 30);
             const Int32 BufferSize = 128;
-            using (var fileStream = File.OpenRead("Application2.Resources.data.txt")) 
-            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
-            {
-                String line;
-                while ((line = streamReader.ReadLine()) != null)
+            
+               
+                using (var streamReader = new StreamReader(fs, Encoding.UTF8, true, BufferSize))
                 {
-                    if( br == 0 ) { return line; }
-                    br--;
+                    String line;
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        if (br == 0) { return line; }
+                        br--;
+                    }
                 }
-            }
+            
             return "";
         }
 
@@ -75,9 +78,9 @@ namespace Application2.Model
             return retval;
         }
 
-        static public Tuple<string, int ,List<bool>> GenerateRandomGame()
+        static public Tuple<string, int ,List<bool>> GenerateRandomGame(Stream fs)
         {
-            string line = getRandomLine();
+            string line = getRandomLine(fs);
 
             string task = line.Substring(0, line.IndexOf("|", 0));
             int numberofsym = getNumberOfSymbols(line);

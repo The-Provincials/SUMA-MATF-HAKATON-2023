@@ -6,7 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application2.Model;
+
 using Xamarin.Forms;
+using System.IO;
+using System.Reflection;
 
 namespace Application2
 {
@@ -20,8 +23,15 @@ namespace Application2
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Tuple<string, int, List<bool>> a = EvaluationTools.GenerateRandomGame();
-            DisplayAlert("AA", a.Item1.ToString() + " " + a.Item2.ToString() + a.Item3.ToString(), "OK");
+
+            string resourceID = "Application2.Resources.database.txt";
+            Assembly assembly = GetType().GetTypeInfo().Assembly;
+            Tuple<string, int, List<bool>> a;
+            using (Stream stream = assembly.GetManifestResourceStream(resourceID))
+            {
+                a = EvaluationTools.GenerateRandomGame(stream);
+            }
+            DisplayAlert("AA", a.Item1.ToString() + " " + a.Item2.ToString() + a.Item3.Count, "OK");
             Navigation.PushAsync(new GamePage("A+B+C+A+B+C+A+B+C+A+B+C"));
         }
         private void Button_about_Clicked(object sender, EventArgs e)
