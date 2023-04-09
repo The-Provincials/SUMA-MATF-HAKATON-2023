@@ -13,6 +13,8 @@
   <ItemGroup>
     <None Remove="Resources\and.jpg" />
     <None Remove="Resources\and.png" />
+    <None Remove="Resources\in.jpg" />
+    <None Remove="Resources\ingate.jpg" />
     <None Remove="Resources\not.jpg" />
     <None Remove="Resources\or.jpg" />
     <None Remove="Resources\outgate.jpg" />
@@ -21,6 +23,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\and.jpg" />
     <EmbeddedResource Include="Resources\and.png" />
+    <EmbeddedResource Include="Resources\in.jpg" />
     <EmbeddedResource Include="Resources\not.jpg" />
     <EmbeddedResource Include="Resources\outgate.jpg" />
   </ItemGroup>
@@ -36,6 +39,10 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\or.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <XamlAppDef Include="Resources\ingate.jpg" />
   </ItemGroup>
 
   <ItemGroup>

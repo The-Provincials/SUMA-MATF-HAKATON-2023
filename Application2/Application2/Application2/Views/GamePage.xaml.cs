@@ -30,10 +30,10 @@ namespace Application2.Views
         }
 
         SKBitmap bitmapAnd = null, bitmapOr = null, bitmapNot = null, bitmapOut = null;
-        SKBitmap[] bitmapsIn;
+        SKBitmap bitmapIn = null;
         SKMatrix matrix = SKMatrix.CreateIdentity();
         SKRect rectAnd, rectOr, rectNot, rectClear, rectOut;
-        LogicObject firstClicked = null;
+        LogicObject firstClicked = null, outGate = null;
         SKPoint firstClickedPoint;
         int lowerCoordinate = 0;
 
@@ -45,6 +45,7 @@ namespace Application2.Views
         List<Tuple<SKPoint, SKPoint>> LinesForDrawing = new List<Tuple<SKPoint, SKPoint>>();
 
         public static float shellPercentage = 0.2f;
+        private int numOfVariables;
 
         long touchId = -1;
         SKPoint previousPoint;
@@ -52,6 +53,7 @@ namespace Application2.Views
 
         public GamePage(string equation = "", int numOfVariables = 3)
         {
+            this.numOfVariables = numOfVariables;
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -251,10 +253,20 @@ namespace Application2.Views
             canvas.DrawBitmap(bitmapNot, notPoint);
             canvas.DrawBitmap(bitmapOut, outPoint);
 
+            for (int i = 0; i < numOfVariables; ++i)
+            {
+                canvas.DrawBitmap(bitmapIn, new SKPoint(0, (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i + 1)));
+                canvas.DrawText(('A' + i).ToString(),
+                    new SKPoint(0,
+                    (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i))
+                    , new SKPaint{TextSize = 100.0f});
+            }
+
             if (cleared)
             {
                 cleared = false;
                 AddOutGate();
+                AddInGates();
             } else
             {
                 canvas.DrawText("CLEAR", textPoint, new SKPaint { TextSize = 100.0f });
@@ -281,10 +293,15 @@ namespace Application2.Views
             DrawnObjectMatrices.Add(new Tuple<SKMatrix, GateType, LogicObject>(
                 new SKMatrix(matrix.Values), movingGate, objectToAdd));
         }
+        
+        void AddInGates()
+        {
+
+        }
 
         void AddOutGate()
         {
-            LogicObject outGate = new OutObject();
+            outGate = new OutObject();
 
             DrawnObjectMatrices.Add(new Tuple<SKMatrix, GateType, LogicObject>(
                 SKMatrix.CreateIdentity(), GateType.None, outGate));
@@ -341,7 +358,19 @@ namespace Application2.Views
             }
 
             rectOut = new SKRect(canvasView.CanvasSize.Width * 9/10, 0.5f / shellPercentage * bitmapAnd.Width - bitmapAnd.Width / 2, canvasView.CanvasSize.Width, 0.5f / shellPercentage * bitmapAnd.Width + bitmapAnd.Width / 2);
-        
+
+
+            resourceID = "Applications2.Resources.in.jpg";
+            using (Stream stream = assembly.GetManifestResourceStream(resourceID))
+            {
+                SKBitmap tmpBitmap = SKBitmap.Decode(stream);
+                bitmapIn = new SKBitmap((int)(canvasView.CanvasSize.Width / 10),
+                (int)(canvasView.CanvasSize.Width / 5), tmpBitmap.ColorType,
+                tmpBitmap.AlphaType, tmpBitmap.ColorSpace);
+                tmpBitmap.ScalePixels(bitmapIn, SKFilterQuality.Low);
+            }
+
+            
 
         }
 
