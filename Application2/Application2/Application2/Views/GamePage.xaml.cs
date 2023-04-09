@@ -7,15 +7,25 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace Application2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GamePage : ContentPage
     {
-        public GamePage()
+        private string formula = "";
+
+        public string Formula
+        {
+            get { return formula; }
+            set { if (value == formula) { return; } formula = value; OnPropertyChanged(); }
+        }
+        public GamePage( string formula )
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            BindingContext = this;
+            Formula = formula;
         }
 
         private void Button_Clicked(object sender, EventArgs e)

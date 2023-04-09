@@ -15,3 +15,4 @@ C:\Users\User\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2\obj\
 C:\Users\User\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2\obj\Debug\netstandard2.0\ref\Application2.dll
 C:\Users\User\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2\obj\Debug\netstandard2.0\Views\GamePage.xaml.g.cs
 C:\Users\User\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\User\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2\obj\Debug\netstandard2.0\Views\GatePage.xaml.g.cs

@@ -17,5 +17,23 @@ namespace Application2.Views
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GatePage(0));
+        }
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GatePage(1));
+        }
+
+        private void ImageButton_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GatePage(2));
+        }
     }
 }

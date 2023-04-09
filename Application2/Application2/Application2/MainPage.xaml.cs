@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Application2.Model;
 using Xamarin.Forms;
 
 namespace Application2
@@ -19,7 +20,9 @@ namespace Application2
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GamePage());
+            Tuple<string, int, List<bool>> a = EvaluationTools.GenerateRandomGame();
+            DisplayAlert("AA", a.Item1.ToString() + " " + a.Item2.ToString() + a.Item3.ToString(), "OK");
+            Navigation.PushAsync(new GamePage("A+B+C+A+B+C+A+B+C+A+B+C"));
         }
         private void Button_about_Clicked(object sender, EventArgs e)
         {

@@ -23,7 +23,7 @@
         </pancake:PancakeView>
         <StackLayout Grid.Row="1"
                Grid.ColumnSpan="2" VerticalOptions="Center" Spacing="70">
-            <Button Text ="Zapocni igru"
+            <Button Text ="Započni test"
                     FontSize="30" 
                     HorizontalOptions="Center" 
                     WidthRequest="290" 
@@ -33,19 +33,19 @@
                     Clicked="Button_Clicked"
                      />
 
-                <Button Text ="Generate Circuit"
+                <!--<Button Text ="Željeni "
                     FontSize="30"
                     HorizontalOptions ="Center" 
                     WidthRequest="290" 
                     HeightRequest="70"
                     CornerRadius="15"
-                    BackgroundColor="#99c2ff"/>
+                    BackgroundColor="#99c2ff"/>-->
 
         </StackLayout>
         <Button 
             Grid.Row="2" 
             Grid.Column="0" 
-            Text ="Quit" 
+            Text ="Završi" 
             FontSize="17"  
             VerticalOptions="Start"
             Margin=" 20,0,20,10"
