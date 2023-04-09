@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uMW/098qgZYb9CQwG4jRk6agcvOzjudqgPA17ASoG7HYUtyPh15HByECmpde13Vnfu51V+VR4C7+u4/KsNpYGA==",
+  "dgSpecHash": "64ijHkta1Ub5t6UclVtgsGm1Gx3FGKw/MOB8PJ3s5EYuj36kWRc2qvcfsyiLzI8xlLnYQ1BIfAT+WFsDZcU9ag==",
   "success": true,
   "projectFilePath": "C:\\Users\\bane\\Desktop\\SUMA-MATF-HAKATON-2023\\Application2\\Application2\\Application2\\Application2.csproj",
   "expectedPackageFiles": [
@@ -19,8 +19,8 @@
     "C:\\Users\\bane\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\bane\\.nuget\\packages\\touchtracking\\1.2.0\\touchtracking.1.2.0.nupkg.sha512",
     "C:\\Users\\bane\\.nuget\\packages\\touchtracking.forms\\1.1.0\\touchtracking.forms.1.1.0.nupkg.sha512",
-    "C:\\Users\\bane\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\bane\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\bane\\.nuget\\packages\\xamarin.essentials\\1.7.5\\xamarin.essentials.1.7.5.nupkg.sha512",
+    "C:\\Users\\bane\\.nuget\\packages\\xamarin.forms\\5.0.0.2578\\xamarin.forms.5.0.0.2578.nupkg.sha512",
     "C:\\Users\\bane\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
   ],
   "logs": []

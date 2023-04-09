@@ -68,3 +68,7 @@ C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Applicati
 C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\obj\iPhoneSimulator\Debug\Application2.iOS.csproj.CopyComplete
 C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\obj\iPhoneSimulator\Debug\Application2.iOS.exe
 C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\obj\iPhoneSimulator\Debug\Application2.iOS.pdb
+C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\bin\iPhoneSimulator\Debug\TouchTracking.dll
+C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\bin\iPhoneSimulator\Debug\TouchTracking.iOS.dll
+C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\bin\iPhoneSimulator\Debug\TouchTracking.Forms.dll
+C:\Users\bane\Desktop\SUMA-MATF-HAKATON-2023\Application2\Application2\Application2.iOS\bin\iPhoneSimulator\Debug\TouchTracking.Forms.iOS.dll

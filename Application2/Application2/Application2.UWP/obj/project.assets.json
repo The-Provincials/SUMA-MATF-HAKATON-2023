@@ -925,8 +925,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -1987,8 +1987,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -3050,8 +3050,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -4110,8 +4110,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -5172,8 +5172,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -6235,8 +6235,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -7297,8 +7297,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -8360,8 +8360,8 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "TouchTracking": "1.2.0",
           "TouchTracking.Forms": "1.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.5",
+          "Xamarin.Forms": "5.0.0.2578",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "compile": {
@@ -13796,5 +13796,41 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.5 to 1.7.0. Reference the package directly from the project to select a different version. \r\n Application2.UWP -> Application2 -> Xamarin.Essentials (>= 1.7.5) \r\n Application2.UWP -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2578 to 5.0.0.2196. Reference the package directly from the project to select a different version. \r\n Application2.UWP -> Application2 -> Xamarin.Forms (>= 5.0.0.2578) \r\n Application2.UWP -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    }
+  ]
 }

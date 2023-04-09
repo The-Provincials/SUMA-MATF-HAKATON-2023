@@ -22,7 +22,7 @@
             <Label Text="unos" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand"/>
             <Button Text="Submit" Grid.Row="0" Grid.Column="5" BackgroundColor="Red"/>-->
             <skia:SKCanvasView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface" BackgroundColor="Red" />
+                           PaintSurface="OnCanvasViewPaintSurface" BackgroundColor="White" />
             <Grid.Effects>
                 <tt:TouchEffect Capture="True"
                             TouchAction="OnTouchEffectAction" />
