@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\and.jpg" />
+    <None Remove="Resources\and.png" />
+    <None Remove="Resources\database.txt" />
+    <None Remove="Resources\in.jpg" />
+    <None Remove="Resources\main_logo.png" />
+    <None Remove="Resources\not.jpg" />
+    <None Remove="Resources\or.jpg" />
+    <None Remove="Resources\outgate.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\and.jpg" />
+    <EmbeddedResource Include="Resources\and.png" />
+    <EmbeddedResource Include="Resources\database.txt" />
+    <EmbeddedResource Include="Resources\in.jpg" />
+    <EmbeddedResource Include="Resources\main_logo.png" />
+    <EmbeddedResource Include="Resources\not.jpg" />
+    <EmbeddedResource Include="Resources\or.jpg" />
+    <EmbeddedResource Include="Resources\outgate.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.3" />
+    <PackageReference Include="TouchTracking" Version="1.2.0" />
+    <PackageReference Include="TouchTracking.Forms" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\GamePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\GatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,1 +1,0 @@
-C:\Users\Bane\Documents\GitHub\xamarin-forms-samples\GetStarted\FirstApp\AwesomeApp\AwesomeApp.UWP\AwesomeApp.UWP.csproj;x86

@@ -1,0 +1,1 @@
+C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Logication.UWP.csproj;x64

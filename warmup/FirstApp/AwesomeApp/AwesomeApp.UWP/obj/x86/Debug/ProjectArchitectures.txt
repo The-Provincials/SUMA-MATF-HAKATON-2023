@@ -1,1 +1,0 @@
-C:\Users\User\SUMA-MATF-HAKATON-2023\warmup\FirstApp\AwesomeApp\AwesomeApp.UWP\AwesomeApp.UWP.csproj;x86

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms"
+             x:Class="Logication.Views.GamePage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="CornflowerBlue" Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <!--<RowDefinition Height="60"></RowDefinition>-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <ImageButton  Source="back_black_icon2.png" Grid.Row="0" Grid.Column="0" Padding="12" BackgroundColor="CornflowerBlue" Clicked="Button_Clicked"/>
+
+            <Label HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                   Text="{Binding Formula ,Mode=OneWay }" 
+                   Grid.Row="0" 
+                   Grid.Column="1" 
+                   Grid.ColumnSpan="3" 
+                   FontSize="17"
+                   />
+            <ImageButton Source="check_icon.png" Grid.Row="0" Grid.Column="4" Padding="12" BackgroundColor="CornflowerBlue"/>
+
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="5">
+
+                <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface" BackgroundColor="White" />
+                <Grid.Effects>
+                    <tt:TouchEffect Capture="True"
+                            TouchAction="OnTouchEffectAction" />
+                </Grid.Effects>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

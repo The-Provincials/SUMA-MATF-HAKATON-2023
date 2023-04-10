@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logication.Views.GatePage">
+    <ContentPage.Content BackgroundColor="#99c2ff">
+        <ScrollView>
+            <StackLayout>
+
+                <ImageButton
+                          HeightRequest="50"
+                          Source="back_black_icon2.png"  
+                          HorizontalOptions="Start"
+                          BackgroundColor="White" 
+                          Clicked="Button_Clicked"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="200"></RowDefinition>
+                        <RowDefinition Height="200"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+
+                        <RowDefinition Height="*"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+
+                    <Frame
+                    Grid.Row="0" 
+                    BackgroundColor="#99c2ff"
+                    HeightRequest="100"
+                    Padding="10,10,10,10"
+                    CornerRadius="15">
+                        <Label
+                        FontSize="Large"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions ="CenterAndExpand"
+                        Text="{Binding Imeseme}"></Label>
+                    </Frame>
+                    <Image Grid.Row="1" BackgroundColor="Transparent" Source ="{Binding ImagePath} ">
+
+                    </Image>
+                    <Frame
+                    Grid.Row="2" 
+                    BackgroundColor="#99c2ff"
+                    Padding="10,10,10,10"
+                    CornerRadius="15"
+                    >
+                        <Label
+                        FontSize="Subtitle"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions ="CenterAndExpand"
+                        Text="{Binding Text}"></Label>
+                    </Frame>
+                    <Image VerticalOptions="Center" Grid.Row="4" BackgroundColor="Transparent" Source ="{Binding TablePath} ">
+
+                    </Image>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
