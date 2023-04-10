@@ -19,6 +19,7 @@
     <None Remove="Resources\not.jpg" />
     <None Remove="Resources\or.jpg" />
     <None Remove="Resources\outgate.jpg" />
+    <None Remove="Resources\trashcan.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,7 @@
     <EmbeddedResource Include="Resources\not.jpg" />
     <EmbeddedResource Include="Resources\or.jpg" />
     <EmbeddedResource Include="Resources\outgate.jpg" />
+    <EmbeddedResource Include="Resources\trashcan.jpg" />
   </ItemGroup>
 
   <ItemGroup>

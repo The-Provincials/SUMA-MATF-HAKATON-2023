@@ -24,6 +24,7 @@ namespace Logication.Models
                     EvaluatedFrom[this.Id].Count < 1)
                 throw new Exception();
 
+            this.Value = true;
             foreach (LogicObject obj in list)
             {
                 this.Value &= obj.Value;

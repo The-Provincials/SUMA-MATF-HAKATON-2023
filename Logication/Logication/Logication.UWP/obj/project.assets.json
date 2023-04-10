@@ -8456,7 +8456,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "GmkKfoyerqmsHMn7OZj0AKpcBabD+GaafqphvX2Mw406IwiJRy1pKcKqdCfKJfYmkRyJ6+e+RaUylgdJoDa1jQ==",
+      "sha512": "ok+RPAtESz/9MUXeIEz6Lv5XAGQsaNmEYXMsgVALj4D7kqC8gveKWXWXbufLySR2fWrwZf8smyN5RmHu0e4BHA==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
@@ -13718,31 +13718,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bane\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bane\\Desktop\\Logication\\Logication\\Logication.UWP\\Logication.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\SUMA-MATF-HAKATON-2023\\Logication\\Logication\\Logication.UWP\\Logication.UWP.csproj",
       "projectName": "Logication.UWP",
-      "projectPath": "C:\\Users\\Bane\\Desktop\\Logication\\Logication\\Logication.UWP\\Logication.UWP.csproj",
-      "packagesPath": "C:\\Users\\Bane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bane\\Desktop\\Logication\\Logication\\Logication.UWP\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\SUMA-MATF-HAKATON-2023\\Logication\\Logication\\Logication.UWP\\Logication.UWP.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\SUMA-MATF-HAKATON-2023\\Logication\\Logication\\Logication.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.16299"
@@ -13754,8 +13749,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\Bane\\Desktop\\Logication\\Logication\\Logication\\Logication.csproj": {
-              "projectPath": "C:\\Users\\Bane\\Desktop\\Logication\\Logication\\Logication\\Logication.csproj"
+            "C:\\Users\\User\\Documents\\SUMA-MATF-HAKATON-2023\\Logication\\Logication\\Logication\\Logication.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SUMA-MATF-HAKATON-2023\\Logication\\Logication\\Logication\\Logication.csproj"
             }
           }
         }

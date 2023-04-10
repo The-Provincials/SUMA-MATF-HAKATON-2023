@@ -51,6 +51,11 @@ namespace Logication.Models
             {
                 throw new Exception();
             }
+            if (this.IsEvaluated)
+            {
+                return this.Value;
+            }
+
             this.IsBeingEvaluated = true;
             
             List<LogicObject> list;

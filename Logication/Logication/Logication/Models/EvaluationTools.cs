@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Logication.Models
@@ -14,7 +15,7 @@ namespace Logication.Models
             if (a > b) return a;
             return b;
         }
-        static string getRandomLine(Stream fs)
+        static string GetRandomLine(Stream fs)
         {
             int br = rnd.Next(1, 30);
             const Int32 BufferSize = 128;
@@ -33,7 +34,7 @@ namespace Logication.Models
             return "";
         }
 
-        static List<bool> getEvaluationResult(string up)
+        static List<bool> GetEvaluationResult(string up)
         {
             List<bool> retval = new List<bool>();
 
@@ -55,7 +56,7 @@ namespace Logication.Models
             return retval;
         }
 
-        static int getNumberOfSymbols(string up)
+        static int GetNumOfSymbols(string up)
         {
             int retval = 0;
 
@@ -77,14 +78,28 @@ namespace Logication.Models
             return retval;
         }
 
-        static public Tuple<string, int, List<bool>> GenerateRandomGame(Stream fs)
+        // expr|minform|...
+        static int GetNumOfComponents(string line)
         {
-            string line = getRandomLine(fs);
+            int retVal = 0;
+            for(int i = line.IndexOf("|")+1; i < line.Length; i++)
+            {
+                if (line[i] == '|')
+                    break;
+                retVal += line[i] == ' ' ? 1 : 0;
+            }
+            retVal++;
+            return retVal;
+        }
+
+        static public Tuple<string, int, int, List<bool>> GenerateRandomGame(Stream fs)
+        {
+            string line = GetRandomLine(fs);
 
             string task = line.Substring(0, line.IndexOf("|", 0));
-            int numberofsym = getNumberOfSymbols(line);
-            List<bool> result = getEvaluationResult(line);
-            return new Tuple<string, int, List<bool>>(task, numberofsym, result);
+            int numOfSymbols = GetNumOfSymbols(line), numOfComponents = GetNumOfComponents(line);
+            List<bool> result = GetEvaluationResult(line);
+            return new Tuple<string, int, int, List<bool>>(task, numOfSymbols, numOfComponents, result);
         }
 
         bool CompareList(List<bool> l1, List<bool> l2)

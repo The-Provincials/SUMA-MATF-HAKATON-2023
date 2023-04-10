@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <ImageButton  Source="back_black_icon2.png" Grid.Row="0" Grid.Column="0" Padding="12" BackgroundColor="CornflowerBlue" Clicked="Button_Clicked"/>
+            <ImageButton  Source="back_black_icon2.png" Grid.Row="0" Grid.Column="0" Padding="12" BackgroundColor="CornflowerBlue" Clicked="Back_Clicked"/>
 
             <Label HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
                    Text="{Binding Formula ,Mode=OneWay }" 
@@ -28,7 +28,7 @@
                    Grid.ColumnSpan="3" 
                    FontSize="17"
                    />
-            <ImageButton Source="check_icon.png" Grid.Row="0" Grid.Column="4" Padding="12" BackgroundColor="CornflowerBlue"/>
+            <ImageButton Source="check_icon.png" Grid.Row="0" Grid.Column="4" Padding="12" BackgroundColor="CornflowerBlue" Clicked="Submit_Clicked"/>
 
 
             <Grid Grid.Row="1" Grid.ColumnSpan="5">

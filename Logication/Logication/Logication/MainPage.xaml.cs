@@ -25,7 +25,7 @@ namespace Logication
 
             string resourceID = "Logication.Resources.database.txt";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
-            Tuple<string, int, List<bool>> a;
+            Tuple<string, int, int, List<bool>> a;
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
             {
                 a = EvaluationTools.GenerateRandomGame(stream);

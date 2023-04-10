@@ -28,8 +28,9 @@ namespace Logication.Views
             Out
         }
 
-        SKBitmap bitmapAnd = null, bitmapOr = null, bitmapNot = null, bitmapOut = null;
-        SKBitmap bitmapIn = null;
+        SKBitmap bitmapAnd = null, bitmapOr = null,
+        bitmapNot = null, bitmapOut = null,
+        bitmapIn = null, bitmapTrashCan = null;
         SKMatrix matrix = SKMatrix.CreateIdentity();
         SKRect rectAnd, rectOr, rectNot, rectClear, rectOut;
         SKRect[] rectsIn;
@@ -47,12 +48,13 @@ namespace Logication.Views
         List<Tuple<SKPoint, SKPoint>> LinesForDrawing = new List<Tuple<SKPoint, SKPoint>>();
 
         public static float shellPercentage = 0.2f;
-        private int numOfVariables;
+        private int numOfVariables, numOfComponents, myNumOfComponents;
 
         long touchId = -1;
         SKPoint previousPoint;
 
         private string formula = "";
+        private bool[] solution;
 
         public string Formula
         {
@@ -60,18 +62,65 @@ namespace Logication.Views
             set { if (value == formula) { return; } formula = value; OnPropertyChanged(); }
         }
 
-        public GamePage( Tuple<string, int, List<bool>> a)
+        public GamePage( Tuple<string, int, int, List<bool>> a)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = this;
             Formula = a.Item1;
             numOfVariables = a.Item2;
+            numOfComponents = a.Item3;
+
+            solution = new bool[1 << numOfVariables];
+            for(int i = 0; i < (1<<numOfVariables); i++)
+            {
+                int newI = 0, idx = i;
+                for(int j = 0; j < numOfVariables; ++j)
+                {
+                    newI <<= 1;
+                    newI |= idx & 1;
+                    idx >>= 1;
+                }
+                solution[newI] = a.Item4[i];
+            }
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Back_Clicked(object sender, EventArgs e)
         {
+            ClearAll();
             Navigation.PopAsync();
+        }
+
+        private void Submit_Clicked(object sender, EventArgs e)
+        {
+            List<bool> result = Test();
+
+            if (result == null)
+                return;
+
+            bool correct = true;
+            for(int i = 0; i < (1<<numOfVariables); ++i)
+            {
+                correct &= (result[i] == solution[i]);
+            }
+
+            string msg = "";
+
+            if (correct)
+            {
+                msg = "Tačno rešenje!\n";
+                msg += "Vaše rešenje koristi " + myNumOfComponents.ToString() + " AND i OR elemenata.\n";
+                msg += "Komisijsko rešenje koristi " + numOfComponents.ToString() + " elemenata\n";
+                if(myNumOfComponents <= numOfComponents)
+                {
+                    msg += "Bravo!";
+                }
+            } else
+            {
+                msg += "Ponovo razmotrite kolo!";
+            }
+
+            DisplayAlert("Testiran Iskaz", msg, "OK");
         }
 
         private void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -84,11 +133,7 @@ namespace Logication.Views
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    // Find transformed bitmap rectangle
-                    //SKRect rect = new SKRect(0, 0, bitmap.Width, bitmap.Height);
-                    //rect = matrix.MapRect(rect);
-
-                    // Determine if the touch was within that rectangle
+                    // Where was the touch located
                     if (matrix.MapRect(rectAnd).Contains(point))
                     {
                         touchId = args.Id;
@@ -109,46 +154,8 @@ namespace Logication.Views
                     }
                     else if (point.Y > lowerCoordinate)
                     {
-                        cleared = true;
-                        DrawnObjectMatrices.Clear();
-                        LinesForDrawing.Clear();
+                        ClearAll();
                     }
-                    else
-                    {
-                        foreach (Tuple<SKMatrix, GateType, LogicObject>
-                            matrixGateType in DrawnObjectMatrices)
-                        {
-                            if ((ClicksOut(point.X, point.Y) && firstClicked != null &&
-                                matrixGateType.Item2 == GateType.Out) ||
-                                (matrixGateType.Item2 != GateType.None &&
-                                matrixGateType.Item2 != GateType.In &&
-                                matrixGateType.Item2 != GateType.Out &&
-                                matrixGateType.Item1.MapRect(
-                                GateToRect(matrixGateType.Item2))
-                                .Contains(point)))
-                            {
-                                ProcessClick(matrixGateType, matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)));
-                            }
-                            if (matrixGateType.Item2 == GateType.In)
-                            {
-                                for (int i = 0; i < numOfVariables; ++i)
-                                {
-                                    if (inGates[i].Id != matrixGateType.Item3.Id)
-                                        continue;
-                                    SKRect rect = rectsIn[i];
-                                    if (matrixGateType.Item1.MapRect(rect)
-                                        .Contains(point))
-                                    {
-                                        //DisplayAlert(rect.Top.ToString() + "\n" + rect.Bottom.ToString(),
-                                        //    point.X.ToString() + " " + point.Y.ToString(), "a");
-                                        ProcessClick(matrixGateType, rect);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-
                     break;
 
                 case TouchActionType.Moved:
@@ -168,12 +175,43 @@ namespace Logication.Views
                         matrix.MapRect(GateToRect(movingGate)).MidX <= 0.1 * canvasView.CanvasSize.Width ||
                         matrix.TransY >= -shellPercentage * canvasView.CanvasSize.Height))
                     {
-                        //matrix = SKMatrix.CreateIdentity();
+                        // No effect
                     }
                     else if (movingGate != GateType.None)
                     {
-                        PlaceLogicObject();
-
+                        AddLogicObject();
+                        
+                    } else
+                    {
+                            foreach (Tuple<SKMatrix, GateType, LogicObject>
+                                matrixGateType in DrawnObjectMatrices)
+                            {
+                                if ((ClicksOut(point.X, point.Y) && firstClicked != null &&
+                                    matrixGateType.Item2 == GateType.Out) ||
+                                    (matrixGateType.Item2 != GateType.None &&
+                                    matrixGateType.Item2 != GateType.In &&
+                                    matrixGateType.Item2 != GateType.Out &&
+                                    matrixGateType.Item1.MapRect(
+                                    GateToRect(matrixGateType.Item2))
+                                    .Contains(point)))
+                                {
+                                    ProcessClick(matrixGateType, matrixGateType.Item1.MapRect(GateToRect(matrixGateType.Item2)));
+                                }
+                                if (matrixGateType.Item2 == GateType.In)
+                                {
+                                    for (int i = 0; i < numOfVariables; ++i)
+                                    {
+                                        if (inGates[i].Id != matrixGateType.Item3.Id)
+                                            continue;
+                                        SKRect rect = rectsIn[i];
+                                        if (matrixGateType.Item1.MapRect(rect)
+                                            .Contains(point))
+                                        {
+                                            ProcessClick(matrixGateType, rect);
+                                        }
+                                    }
+                                }
+                            }
                     }
                     canvasView.InvalidateSurface();
                     movingGate = GateType.None;
@@ -217,7 +255,6 @@ namespace Logication.Views
                 {
                     firstClicked = null;
                 }
-
             }
             else
             {
@@ -240,9 +277,7 @@ namespace Logication.Views
             SKPoint andPoint = new SKPoint(0, lowerCoordinate);
             SKPoint orPoint = new SKPoint((int)(canvasView.CanvasSize.Width / 5) * 1, lowerCoordinate);
             SKPoint notPoint = new SKPoint((int)(canvasView.CanvasSize.Width / 5) * 2, lowerCoordinate);
-            SKPoint textPoint = new SKPoint((int)(canvasView.CanvasSize.Width / 5) * 3, lowerCoordinate +
-                0.5f * (canvasView.CanvasSize.Height - lowerCoordinate)
-                );
+            SKPoint textPoint = new SKPoint((int)(canvasView.CanvasSize.Width / 5) * 4, lowerCoordinate);
             SKPoint outPoint = new SKPoint((int)(canvasView.CanvasSize.Width * 9 / 10),
                 0.5f / shellPercentage * bitmapAnd.Width - bitmapAnd.Width / 2);
 
@@ -300,8 +335,6 @@ namespace Logication.Views
                     , new SKPaint { TextSize = 100.0f });
             }
 
-            canvas.SetMatrix(SKMatrix.CreateIdentity());
-
             if (cleared)
             {
                 cleared = false;
@@ -310,21 +343,23 @@ namespace Logication.Views
             }
             else
             {
-                canvas.DrawText("CLEAR", textPoint, new SKPaint { TextSize = 100.0f });
+                canvas.DrawBitmap(bitmapTrashCan, textPoint);
             }
 
         }
 
-        private void PlaceLogicObject()
+        private void AddLogicObject()
         {
             LogicObject objectToAdd = null;
             if (movingGate == GateType.And)
             {
                 objectToAdd = new AndObject();
+                ++myNumOfComponents;
             }
             if (movingGate == GateType.Or)
             {
                 objectToAdd = new OrObject();
+                ++myNumOfComponents;
             }
             if (movingGate == GateType.Not)
             {
@@ -425,6 +460,16 @@ namespace Logication.Views
                  (canvasView.CanvasSize.Height / (2 * numOfVariables + 1)) * (2 * i + 1) +
                  canvasView.CanvasSize.Width / 5);
             }
+
+            resourceID = "Logication.Resources.trashcan.jpg";
+            using (Stream stream = assembly.GetManifestResourceStream(resourceID))
+            {
+                SKBitmap tmpBitmap = SKBitmap.Decode(stream);
+                bitmapTrashCan = new SKBitmap((int)( canvasView.CanvasSize.Width / 5),
+                (int)(canvasView.CanvasSize.Width / 5), tmpBitmap.ColorType,
+                tmpBitmap.AlphaType, tmpBitmap.ColorSpace);
+                tmpBitmap.ScalePixels(bitmapTrashCan, SKFilterQuality.Low);
+            }
         }
 
         bool ClicksOut(float x, float y)
@@ -477,11 +522,17 @@ namespace Logication.Views
             catch (Exception ex)
             {
                 DisplayAlert("GREŠKA", "Nije moguće evaluirati iskaz", "OK");
+                return null;
             }
 
             return res;
-
-
+        }
+        void ClearAll()
+        {
+            cleared = true;
+            firstClicked = null;
+            DrawnObjectMatrices.Clear();
+            LinesForDrawing.Clear();
         }
     }
 }
