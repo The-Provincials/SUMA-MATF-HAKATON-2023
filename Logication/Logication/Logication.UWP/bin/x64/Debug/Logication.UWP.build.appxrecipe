@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=268C2635-5D56-415A-A5CD-706413DCB761</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\Logication.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\Logication.UWP.exe">
       <PackagePath>entrypoint\Logication.UWP.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bane\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
@@ -91,7 +91,7 @@
     <AppxPackagedFile Include="C:\Users\Bane\.nuget\packages\xamarin.forms.pancakeview\2.3.0.759\lib\netstandard2.0\Xamarin.Forms.PancakeView.dll">
       <PackagePath>Xamarin.Forms.PancakeView.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication\bin\Debug\netstandard2.0\Logication.dll">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication\bin\Debug\netstandard2.0\Logication.dll">
       <PackagePath>Logication.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bane\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
@@ -103,124 +103,124 @@
     <AppxPackagedFile Include="C:\Users\Bane\.nuget\packages\xamarin.forms\5.0.0.2196\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\Logication.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\Logication.UWP.xr.xml">
       <PackagePath>Logication.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\X64\ucrtbased.dll">
@@ -232,10 +232,10 @@
     <AppxPackagedFile Include="C:\Users\Bane\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bane\Desktop\Logication\Logication\Logication.UWP\bin\x64\Debug\Core\Logication.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Bane\Documents\GitHub\SUMA-MATF-HAKATON-2023\Logication\Logication\Logication.UWP\bin\x64\Debug\Core\Logication.UWP.exe">
       <PackagePath>Logication.UWP.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

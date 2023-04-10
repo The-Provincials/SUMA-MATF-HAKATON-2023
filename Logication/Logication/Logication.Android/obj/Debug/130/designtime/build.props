@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638167656049098564
+_nugetassetstimestamp=638167709424392900
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\user\documents\suma-matf-hakaton-2023\logication\logication\logication.android\logication.android.csproj
+projectfullpath=c:\users\bane\documents\github\suma-matf-hakaton-2023\logication\logication\logication.android\logication.android.csproj
